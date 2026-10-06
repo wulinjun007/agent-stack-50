@@ -1,0 +1,5 @@
+vendor/
+.hallmark/
+.DS_Store
+*.log
+node_modules/

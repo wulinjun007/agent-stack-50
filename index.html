@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- Hallmark · macrostructure: 13 Index-First · nav: N6 Newspaper masthead · footer: Ft2 Inline rule single-line
+     theme: Almanac (light paper oklch(94% .008 245) / cool accent hue 245 / Hanken Grotesk + IBM Plex Mono)
+     genre: editorial · enrichment: none (typography only) · tone: encyclopaedic, austere
+     states: default · hover · focus-visible · active · disabled  ·  contrast: pass (40-41)  ·  mobile: pass (34, 49-56) -->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentStack 50 · AI 工作流 × 智能体 × 部署 —— GitHub TOP50 工具栈年鉴</title>
+<meta name="description" content="逐仓核验的 GitHub 高星工具栈年鉴：AI 工作流、智能体与部署三条主线 TOP 50 开源项目，含 star/许可/活跃度快照、能力调用管线与完整 PRD。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://wulinjun007.github.io/agent-stack-50/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AgentStack 50">
+<meta property="og:title" content="AgentStack 50 · AI 工作流 × 智能体 × 部署 TOP50">
+<meta property="og:description" content="50 个仓库 · 7 个分类 · 378.7 万星 · 逐仓核验快照 + 能力调用示范。">
+<meta property="og:url" content="https://wulinjun007.github.io/agent-stack-50/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AgentStack 50 · AI 工具栈 TOP50 年鉴">
+<meta name="twitter:description" content="AI 工作流 · 智能体 · 部署三条主线，GitHub 逐仓核验 TOP50 + 能力调用管线。">
+<meta name="theme-color" content="#eceef2">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"AgentStack 50","description":"AI 工作流、智能体与部署三条主线的 GitHub TOP50 开源项目年鉴（2026-10-06/07 快照，逐仓核验）","url":"https://wulinjun007.github.io/agent-stack-50/","keywords":["AI 工作流","AI 智能体","AI 部署","GitHub","开源","Agent","LLM"],"creator":{"@type":"Organization","name":"AgentStack 50"},"tempCoverage":"2026-10-06/2026-10-07"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Almanac tokens（锁定值，来源 hallmark 主题库；页面内禁止出现 token 之外的颜色/字体） ── */
+:root{
+  --color-paper:   oklch(94% 0.008 245);
+  --color-paper-2: oklch(91% 0.010 245);
+  --color-paper-3: oklch(86% 0.012 240);
+  --color-rule:    oklch(74% 0.012 240);
+  --color-rule-2:  oklch(38% 0.018 240);
+  --color-muted:   oklch(46% 0.014 245);
+  --color-neutral: oklch(28% 0.016 245);
+  --color-ink-2:   oklch(20% 0.018 245);
+  --color-ink:     oklch(16% 0.020 245);
+  --color-accent:  oklch(38% 0.135 250);
+  --color-accent-ink: oklch(97% 0.010 250);
+  --color-focus:   oklch(38% 0.135 250);
+  --color-flag:    oklch(52% 0.140 40);
+
+  --font-display: "Hanken Grotesk","PingFang SC","Microsoft YaHei",ui-sans-serif,sans-serif;
+  --font-body:    "Hanken Grotesk","PingFang SC","Microsoft YaHei",ui-sans-serif,sans-serif;
+  --font-mono:    "IBM Plex Mono","PingFang SC",ui-monospace,monospace;
+
+  --text-xs:.6875rem; --text-sm:.8125rem; --text-base:.9375rem; --text-md:1.0625rem;
+  --text-lg:1.25rem; --text-xl:1.5rem; --text-2xl:1.875rem;
+  --text-display:clamp(2.25rem,3.5vw + 1rem,3.75rem);
+  --tracking-display:-.014em; --tracking-label:.06em;
+  --lh-tight:1.1; --lh-snug:1.22; --lh-normal:1.5;
+
+  --space-3xs:.25rem; --space-2xs:.5rem; --space-xs:.75rem; --space-sm:1rem;
+  --space-md:1.5rem; --space-lg:2rem; --space-xl:3rem; --space-2xl:4.5rem;
+
+  --page-max:84rem; --measure:64ch; --banner-h:3.25rem;
+  --ease-out:cubic-bezier(.22,1,.36,1); --dur-fast:120ms; --dur-med:180ms;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--color-paper);color:var(--color-ink);
+  font-family:var(--font-body);font-size:var(--text-base);line-height:var(--lh-normal);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--color-accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--color-focus);outline-offset:1px}
+:focus:not(:focus-visible){outline:none}
+.wrap{max-width:var(--page-max);margin-inline:auto;padding-inline:var(--space-md)}
+.mono{font-family:var(--font-mono)}
+
+/* ── N6 报头 ── */
+.masthead{padding-top:var(--space-md)}
+.issue-line{
+  display:flex;justify-content:space-between;gap:var(--space-sm);
+  font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-label);
+  color:var(--color-muted);text-transform:uppercase;flex-wrap:wrap;
+}
+.masthead .wordmark{
+  margin:var(--space-md) 0 var(--space-2xs);text-align:center;
+  font-family:var(--font-display);font-weight:600;font-size:var(--text-display);
+  letter-spacing:var(--tracking-display);line-height:var(--lh-tight);
+  overflow-wrap:anywhere;min-width:0;
+}
+.wordmark .n{color:var(--color-accent)}
+.masthead .subtitle{
+  text-align:center;color:var(--color-muted);font-size:var(--text-md);
+  margin:0 auto var(--space-md);max-width:52ch;
+}
+.nav-row{
+  display:flex;justify-content:center;gap:var(--space-lg);flex-wrap:wrap;
+  padding-bottom:var(--space-sm);
+}
+.nav-row a{
+  font-family:var(--font-mono);font-size:var(--text-sm);letter-spacing:var(--tracking-label);
+  color:var(--color-ink-2);
+}
+.nav-row a[aria-current="page"]{color:var(--color-accent);font-weight:600}
+.nav-row a:hover{color:var(--color-accent);text-decoration:none}
+.masthead::after{
+  content:"";display:block;border-bottom:4px double var(--color-rule-2);
+}
+.stats-row{
+  display:flex;gap:var(--space-md) var(--space-lg);flex-wrap:wrap;align-items:baseline;
+  padding-block:var(--space-sm) var(--space-xs);
+}
+.stats-row .stat{font-family:var(--font-mono);font-size:var(--text-sm);color:var(--color-ink-2)}
+.stats-row .stat b{font-weight:600;font-size:var(--text-md)}
+.stats-row .note{color:var(--color-muted);font-size:var(--text-sm)}
+.intro{max-width:var(--measure);color:var(--color-ink-2);margin:0 0 var(--space-md)}
+
+/* ── 工具栏（页面唯一 sticky 位，top:0） ── */
+.toolbar{
+  position:sticky;top:0;z-index:300;background:var(--color-paper-2);
+  border-block:1px solid var(--color-rule);
+}
+.toolbar-inner{
+  display:flex;align-items:center;gap:var(--space-2xs);flex-wrap:wrap;
+  min-height:var(--banner-h);padding-block:var(--space-2xs);
+}
+.search{position:relative;flex:1 1 15rem;min-width:0}
+.search input{
+  width:100%;height:2.25rem;padding:0 .75rem 0 2rem;
+  font:inherit;font-size:var(--text-sm);color:var(--color-ink);
+  background:var(--color-paper);border:1px solid var(--color-rule);border-radius:0;
+}
+.search input:hover{border-color:var(--color-rule-2)}
+.search input:focus{outline:2px solid var(--color-focus);outline-offset:1px;border-color:transparent}
+.search input:disabled{opacity:.55;cursor:not-allowed}
+.search .lens{
+  position:absolute;left:.6rem;top:50%;transform:translateY(-50%);
+  font-family:var(--font-mono);font-size:var(--text-sm);color:var(--color-muted);
+}
+.search .helper{min-height:1lh;font-size:var(--text-xs);color:var(--color-muted);margin-top:2px}
+.btn-clear{
+  height:2.25rem;padding:0 .75rem;white-space:nowrap;
+  font-family:var(--font-mono);font-size:var(--text-sm);
+  background:transparent;color:var(--color-accent);
+  border:1px solid var(--color-rule);border-radius:0;cursor:pointer;
+}
+.btn-clear:hover:not(:disabled){background:var(--color-paper-3)}
+.btn-clear:active:not(:disabled){transform:translateY(1px)}
+.btn-clear:disabled{opacity:.55;cursor:not-allowed}
+.chips{display:flex;gap:var(--space-2xs);flex-wrap:wrap}
+.chip{
+  font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-label);
+  padding:.4rem .6rem;border:1px solid var(--color-rule);background:transparent;
+  color:var(--color-ink-2);cursor:pointer;white-space:nowrap;border-radius:0;
+}
+.chip:hover{border-color:var(--color-rule-2);background:var(--color-paper-3)}
+.chip[aria-pressed="true"]{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-accent-ink)}
+.chip:active{transform:translateY(1px)}
+.sortsel{
+  height:2.25rem;font:inherit;font-size:var(--text-sm);color:var(--color-ink-2);
+  background:var(--color-paper);border:1px solid var(--color-rule);border-radius:0;padding:0 .5rem;
+}
+.sortsel:hover{border-color:var(--color-rule-2)}
+.count-line{
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);
+  padding:var(--space-2xs) 0;white-space:nowrap;
+}
+
+/* ── 分类与行（Index-First：页面即清单） ── */
+main{padding-bottom:var(--space-2xl)}
+.cat{margin-top:var(--space-lg)}
+.cat-label{
+  font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:var(--tracking-label);
+  color:var(--color-accent);
+  display:flex;justify-content:space-between;gap:var(--space-sm);flex-wrap:wrap;
+}
+.cat-label .sum{color:var(--color-muted)}
+.cat{border-top:1px solid var(--color-rule);padding-top:var(--space-2xs)}
+.row{border-bottom:1px solid var(--color-rule)}
+.row summary{
+  display:grid;grid-template-columns:2.75rem minmax(0,1fr) auto;gap:var(--space-sm);
+  align-items:baseline;padding:var(--space-2xs) var(--space-3xs);cursor:pointer;list-style:none;
+}
+.row summary::-webkit-details-marker{display:none}
+.row summary:hover{background:var(--color-paper-2)}
+.row .r{
+  font-family:var(--font-mono);font-size:var(--text-sm);color:var(--color-muted);
+  font-variant-numeric:tabular-nums;
+}
+.row .nm{min-width:0}
+.row .nm .name{
+  font-family:var(--font-display);font-weight:600;font-size:var(--text-lg);
+  line-height:var(--lh-snug);margin-right:var(--space-2xs);
+  overflow-wrap:anywhere;
+}
+.row .nm .repo{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted)}
+.row .nm .tag{display:block;color:var(--color-ink-2);font-size:var(--text-sm);margin-top:2px}
+.flag{
+  display:inline-block;font-family:var(--font-mono);font-size:var(--text-xs);
+  color:var(--color-flag);border:1px solid var(--color-flag);
+  padding:0 .35rem;margin-left:var(--space-2xs);vertical-align:1px;white-space:nowrap;
+}
+.row .meta{
+  display:flex;gap:var(--space-xs);align-items:baseline;white-space:nowrap;
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);
+}
+.row .meta .lic{max-width:16rem;overflow:hidden;text-overflow:ellipsis}
+.row .stars{font-size:var(--text-sm);color:var(--color-ink-2);font-variant-numeric:tabular-nums}
+.row .body{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-md);
+  padding:var(--space-sm) var(--space-3xs) var(--space-md) calc(2.75rem + var(--space-sm));
+  background:var(--color-paper-2);
+}
+.fact h3{
+  margin:0 0 var(--space-3xs);font-family:var(--font-mono);font-size:var(--text-xs);
+  letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--color-accent);font-weight:600;
+}
+.fact p{margin:0;font-size:var(--text-sm);color:var(--color-ink-2)}
+.fact .mode{
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-accent);
+  border:1px solid var(--color-rule-2);padding:0 .35rem;margin-right:var(--space-2xs);white-space:nowrap;
+}
+.fact code{
+  display:block;margin-top:var(--space-2xs);padding:var(--space-2xs) var(--space-2xs);
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-ink);
+  background:var(--color-paper);border:1px solid var(--color-rule);
+  overflow-wrap:anywhere;white-space:pre-wrap;
+}
+.facts-line{
+  grid-column:1/-1;display:flex;gap:var(--space-sm) var(--space-md);flex-wrap:wrap;
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);
+}
+.facts-line a{color:var(--color-accent)}
+.empty{
+  padding:var(--space-xl) 0;text-align:center;color:var(--color-muted);
+}
+.empty button{
+  height:2.25rem;padding:0 .9rem;font-family:var(--font-mono);font-size:var(--text-sm);
+  background:var(--color-accent);color:var(--color-accent-ink);border:1px solid var(--color-accent);
+  cursor:pointer;border-radius:0;
+}
+.empty button:active{transform:translateY(1px)}
+
+/* ── 文档页（管线 / PRD / 口径） ── */
+.doc{max-width:var(--measure);margin-inline:auto;padding-top:var(--space-md)}
+.doc.wide{max-width:72rem}
+.doc h1{
+  font-family:var(--font-display);font-weight:600;font-size:var(--text-2xl);
+  letter-spacing:var(--tracking-display);line-height:var(--lh-tight);margin:0 0 var(--space-2xs);
+  overflow-wrap:anywhere;min-width:0;
+}
+.doc h2{
+  font-family:var(--font-display);font-weight:600;font-size:var(--text-lg);
+  margin:var(--space-lg) 0 var(--space-2xs);line-height:var(--lh-snug);
+}
+.doc h3{font-size:var(--text-md);margin:var(--space-md) 0 var(--space-2xs);font-weight:600}
+.doc p,.doc li{color:var(--color-ink-2);font-size:var(--text-sm)}
+.doc p{max-width:var(--measure)}
+.doc table{border-collapse:collapse;width:100%;font-size:var(--text-xs);margin:var(--space-sm) 0}
+.doc th{
+  text-align:left;font-family:var(--font-mono);font-size:var(--text-xs);
+  letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--color-muted);
+  border-bottom:1px solid var(--color-rule-2);padding:var(--space-2xs) var(--space-2xs);font-weight:500;
+}
+.doc td{border-bottom:1px solid var(--color-rule);padding:var(--space-2xs);vertical-align:top;color:var(--color-ink-2)}
+.doc td:first-child{white-space:nowrap}
+.pipe-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-sm);margin-top:var(--space-md)}
+.stage{border:1px solid var(--color-rule);background:var(--color-paper-2);padding:var(--space-2xs) var(--space-xs)}
+.stage h3{margin:0 0 var(--space-3xs)}
+.stage h3 .st{
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);font-weight:400;
+  display:inline-block;white-space:nowrap;
+}
+.stage ul{margin:0;padding-left:1.1em}
+.stage li{margin:2px 0}
+.doc code{
+  font-family:var(--font-mono);font-size:.9em;color:var(--color-ink);
+  background:var(--color-paper-3);padding:0 .3em;
+}
+figure.diagram{margin:var(--space-md) 0 0;padding:0}
+figure.diagram svg{width:100%;height:auto;display:block;background:var(--color-paper-2);border:1px solid var(--color-rule)}
+figcaption{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);margin-top:var(--space-2xs);max-width:60ch}
+
+/* ── Ft2 页脚：单行 ── */
+footer{border-top:1px solid var(--color-rule-2)}
+.foot-line{
+  display:flex;justify-content:space-between;gap:var(--space-sm);flex-wrap:wrap;
+  padding-block:var(--space-sm) var(--space-lg);
+  font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-muted);
+}
+.foot-line a{color:var(--color-ink-2)}
+.foot-line a:hover{color:var(--color-accent)}
+
+/* ── 响应式 ── */
+@media (max-width:48rem){
+  .row summary{grid-template-columns:2rem minmax(0,1fr);grid-template-areas:"r nm" "r meta"}
+  .row .r{grid-area:r}.row .nm{grid-area:nm}
+  .row .meta{grid-area:meta;margin-top:2px;flex-wrap:wrap;white-space:normal}
+  .row .body{grid-template-columns:minmax(0,1fr);padding-left:var(--space-3xs)}
+  .pipe-grid{grid-template-columns:minmax(0,1fr)}
+  .doc td:first-child{white-space:normal}
+  .masthead .wordmark{font-size:clamp(2rem,9vw,2.75rem)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#list" style="position:absolute;left:-999px;top:0;background:var(--color-paper);padding:.5rem;z-index:400" onfocus="this.style.left='0'" onblur="this.style.left='-999px'">跳到榜单</a>
+
+<header class="masthead wrap">
+  <p class="issue-line"><span>Agent Stack 50 ·年鉴</span><span>第 001 期 · 快照 2026-10-07 · 数据源 GitHub API</span></p>
+  <h1 class="wordmark">Agent Stack <span class="n">50</span></h1>
+  <p class="subtitle">AI 工作流 · 智能体 · 部署——GitHub 高星工具栈年鉴，逐仓核验，附能力调用示范。</p>
+  <nav class="nav-row" aria-label="站内导航">
+    <a href="#/" aria-current="page" data-nav="#/">榜单</a>
+    <a href="#/pipeline" data-nav="#/pipeline">能力管线</a>
+    <a href="#/prd" data-nav="#/prd">PRD</a>
+    <a href="#/about" data-nav="#/about">数据口径</a>
+    <a href="https://github.com/wulinjun007/agent-stack-50" rel="noopener" target="_blank">仓库 ↗</a>
+  </nav>
+</header>
+
+<div class="stats-row wrap" aria-label="快照统计">
+  <span class="stat"><b>50</b> 项</span>
+  <span class="stat"><b>7</b> 分类</span>
+  <span class="stat">Σ <b id="sum-stars">3,787,701</b> ★</span>
+  <span class="stat"><b>48</b>/50 近半年活跃</span>
+  <span class="note">停更 2 项（MetaGPT、autogen）已标注 · 许可逐仓核对 LICENSE 文件</span>
+</div>
+
+<div id="page-list">
+  <div class="toolbar" role="search">
+    <div class="toolbar-inner wrap">
+      <div class="search">
+        <span class="lens" aria-hidden="true">⌕</span>
+        <input id="q" type="search" placeholder="搜索：名称 / 仓库 / 定位 / 调用方式…" aria-label="搜索项目" autocomplete="off">
+        <div class="helper" id="q-helper">输入即时过滤，无需回车</div>
+      </div>
+      <button class="btn-clear" id="btn-clear" disabled>清除筛选</button>
+      <label class="count-line" for="sort" style="display:contents"></label>
+      <select class="sortsel" id="sort" aria-label="排序方式">
+        <option value="group">分类分组</option>
+        <option value="star">按 ★ 降序</option>
+        <option value="active">按最近活跃</option>
+      </select>
+      <div class="chips" id="chips" role="group" aria-label="分类筛选"></div>
+      <button class="chip" id="btn-osi" aria-pressed="false" title="MIT / Apache-2.0 等 OSI 认可且无重大附加条款">仅宽松许可</button>
+      <span class="count-line" id="count">50 / 50</span>
+    </div>
+  </div>
+  <main class="wrap" id="list" aria-live="polite"></main>
+</div>
+
+<div id="page-pipeline" class="doc wide wrap" hidden>
+  <h1>能力调用管线</h1>
+  <p>本站不是"又一个清单"：它的 PRD、视觉、QA 与部署就是用榜上工具的能力做出来的。七个层级，每层标明调用了哪些项目、产出了什么；状态分四种——<b>已调用</b>（本交付实际发生）、<b>方案已写</b>（工件已落盘 deploy/）、<b>路线图</b>、<b>参照</b>。</p>
+  <figure class="diagram">
+    <svg viewBox="0 0 1200 300" role="img" aria-label="AgentStack 50 构建管线图：调研层经数据层、规格层、方法论层、设计层、实现层、QA 层到部署层，底部为演进层。已调用层级以实心蓝点标出。">
+      <g font-family="IBM Plex Mono, monospace">
+        <g id="stages"></g>
+        <text x="17" y="194" font-size="14" fill="#757b85">演进层（路线图）</text>
+        <rect x="17" y="206" width="1166" height="46" fill="#e4e7ec" stroke="#606571" stroke-width="1"/>
+        <text x="33" y="234" font-size="14" fill="#282c33">mem0 · hindsight · graphiti · langfuse · opik · langchain/langgraph · llama_index · dify · n8n · paperclip</text>
+        <rect x="17" y="268" width="12" height="12" fill="#2d4a8a"/><text x="36" y="279" font-size="13" fill="#757b85">已调用 / 方案已写</text>
+        <rect x="200" y="268" width="12" height="12" fill="#e4e7ec" stroke="#606571"/><text x="219" y="279" font-size="13" fill="#757b85">路线图 / 参照</text>
+      </g>
+    </svg>
+    <figcaption>图 1 · 构建管线：七层一演进。架构图按 archify 交付标准手写——自包含、可缩放、带 aria。</figcaption>
+  </figure>
+  <div class="pipe-grid" id="pipe-grid"></div>
+  <h2>为什么可信</h2>
+  <p>每次"调用"都留下工件：OpenSpec 四件套在 <code>openspec/</code>，部署工件在 <code>deploy/</code>，58 道门禁的逐条结果在 <code>QA-报告.md</code>。榜单里每个条目的"如何调用"也按同一种四状态口径标注——不把计划写成事实。</p>
+</div>
+
+<div id="page-prd" class="doc wrap" hidden>
+  <h1>PRD（V1.0 · 2026-10-07）</h1>
+  <p>规格驱动开发（SDD），按 OpenSpec 目录组织；本页为精炼版，全文见仓库 <a href="https://github.com/wulinjun007/agent-stack-50/blob/main/PRD.md" rel="noopener" target="_blank">PRD.md ↗</a>。</p>
+  <h2>1 · 背景与问题</h2>
+  <p>Agent 工具生态爆发带来三个痛点：榜单噪音大（上千条目按字母排序）、二手数据失真（过期 star、错误许可、无视仓库迁移）、只列不用（不回答"怎么调用"）。本站的位置：GitHub API 逐仓核验 + 三主线严格分组 + "本站就是用这 50 项的能力做出来的"调用示范。</p>
+  <h2>2 · 用户与场景</h2>
+  <table>
+    <tr><th>用户</th><th>场景</th><th>站内动作</th></tr>
+    <tr><td>选型工程师</td><td>在工作流平台间取舍</td><td>分类过滤 → 看许可与活跃 → 展开"为何入选/如何调用"</td></tr>
+    <tr><td>技术决策者</td><td>评估自托管部署路线</td><td>直达部署分类 → 看 Coolify/Dokploy/Ollama 组合 → 照 DEPLOY.md 落地</td></tr>
+    <tr><td>学习者</td><td>系统了解 agent 工程</td><td>读能力管线 → 逆向学习整套方法论</td></tr>
+  </table>
+  <h2>3 · 定位与原则</h2>
+  <p>年鉴式工具栈榜单——冷静、可核验、可复现。五原则：真实数据（API 逐仓拉取并标注快照）、诚实呈现（停更项标注停更）、能力调用（每条目回答"本项目如何调用它"）、无 slop（hallmark 纪律 + 58 门禁）、零依赖交付（单文件、无构建、无追踪）。</p>
+  <h2>4 · 需求规格（场景式摘要）</h2>
+  <table>
+    <tr><th>能力</th><th>关键场景（WHEN → THEN）</th></tr>
+    <tr><td>ranking-data</td><td>打开数据口径 → 见快照时间窗/API 口径/许可核对方法；条目停更超 6 月 → 行内停更标记 + 背景说明；筛选变化 → 计数恒显 N/50</td></tr>
+    <tr><td>browsing-discovery</td><td>搜「本地」→ ollama/LocalAI/open-webui 即时保留；组合过滤 → 交集且计数同步；排序切换 → 筛选不丢；纯键盘 → 全控件可达</td></tr>
+    <tr><td>capability-pipeline</td><td>管线点项目名 → 跳仓库或站内锚点；调用说明 → 必带四状态之一，不把计划伪装成事实</td></tr>
+    <tr><td>deployment</td><td>docker compose up → 8080 可访问且镜像无构建步骤；Pages 上线 → 四路由 200</td></tr>
+  </table>
+  <h2>5 · 能力调用矩阵（核心差异化）</h2>
+  <table>
+    <tr><th>层级</th><th>调用项目</th><th>状态</th></tr>
+    <tr><td>调研层</td><td>awesome-mcp-servers · modelcontextprotocol/servers</td><td>已调用</td></tr>
+    <tr><td>数据层</td><td>GitHub REST API + OpenSpec（PRD 四件套）</td><td>已调用</td></tr>
+    <tr><td>方法论层</td><td>Superpowers（梳理→拆解→实现→两段审查）</td><td>已调用</td></tr>
+    <tr><td>设计层</td><td>hallmark（Almanac×Index-First×58 门禁）· ui-skills（元数据/可访问性）</td><td>已调用</td></tr>
+    <tr><td>实现层</td><td>archify（管线图交付标准）</td><td>已调用（式）</td></tr>
+    <tr><td>QA 层</td><td>browser-use 同类浏览器自动化 · SkillSpector 思路的装前安检</td><td>已调用</td></tr>
+    <tr><td>部署层</td><td>coolify · dokploy · ollama · open-webui · litellm · anything-llm · vllm · LocalAI · ray</td><td>方案已写/路线图</td></tr>
+    <tr><td>运营层</td><td>n8n · activepieces · windmill · paperclip · gastown · OpenHands</td><td>路线图</td></tr>
+    <tr><td>演进层</td><td>mem0 · hindsight · graphiti · langfuse · opik · langchain/langgraph · llama_index · dify</td><td>路线图</td></tr>
+  </table>
+  <h2>6 · 里程碑</h2>
+  <p>V1.0（本次）：榜单 + PRD + 单文件站 + 四通道部署。V1.1：月度刷新脚本 + 停更自动标记。V1.2：语义检索（ollama + llama_index）+ langfuse 观测。V2.0：关系图谱（graphiti）+ 个性化记忆（mem0）。</p>
+  <h2>7 · 风险</h2>
+  <p>数据时效（快照自声明）；仓库迁移频发（月度刷新需检测 301）；许可变动（MCP 正处 MIT→Apache-2.0 过渡）；维护成本（paperclip 需 Node ≥ 24）。</p>
+</div>
+
+<div id="page-about" class="doc wrap" hidden>
+  <h1>数据口径</h1>
+  <h2>快照与核验</h2>
+  <p>时间窗 2026-10-06/07。字段来源：GitHub REST API <code>GET /repos/{owner}/{repo}</code>（star / 主语言 / pushed_at / license 标签），63 个候选仓逐仓拉取。"最近推送"取 <code>pushed_at</code>（含任意分支），不代表发版时间。</p>
+  <h2>许可核验</h2>
+  <p>GitHub license API 对自定义许可一律返回 Other/NOASSERTION。本站对 13 个存疑仓库逐个抓取 LICENSE 文件头部人工核对，得到"MIT 核心 + EE 目录商业""修改版 Apache-2.0""Polyform Shield 双许可"等真实结论。<b>标"宽松许可"= OSI 认可且无重大附加条款</b>；其余商用前请逐条读对应仓库许可。</p>
+  <h2>入选与排除</h2>
+  <p>三主线内按综合影响力取 50；同一赛道保留头部与结构性差异项。高星未入选项及原因：</p>
+  <table>
+    <tr><th>仓库</th><th>★</th><th>原因</th></tr>
+    <tr><td>ruvnet/RuView</td><td>96,695</td><td>WiFi 空间感知（硬件方向），非三主线</td></tr>
+    <tr><td>abi/screenshot-to-code</td><td>80,033</td><td>截图转代码属 UI 生成品类</td></tr>
+    <tr><td>CherryHQ/cherry-studio</td><td>52,399</td><td>桌面客户端，与 lobehub/open-webui 重叠让位</td></tr>
+    <tr><td>LibreChat-AI/LibreChat</td><td>45,333</td><td>同赛道保留头部（open-webui）</td></tr>
+    <tr><td>microsoft/playwright-mcp</td><td>37,874</td><td>浏览器自动化由 browser-use 代表</td></tr>
+    <tr><td>topoteretes/cognee</td><td>31,477</td><td>与 graphiti 同赛道</td></tr>
+    <tr><td>dokku / caprover</td><td>32,170 / 15,179</td><td>PaaS 赛道收缩至 coolify/dokploy 两席</td></tr>
+    <tr><td>Arize-ai/phoenix</td><td>11,732</td><td>可观测第三名，两席已满</td></tr>
+    <tr><td>letta-ai/letta</td><td>25,048</td><td>记忆类压缩至 3 席未入</td></tr>
+    <tr><td>TGI / Xinference</td><td>10,880 / 9,600</td><td>推理引擎赛道由 vLLM/LocalAI 覆盖</td></tr>
+  </table>
+  <h2>迁移与停更</h2>
+  <p>近一年内发生迁移/改名并在本站注明的：OpenHands（All-Hands-AI → OpenHands 组织）、openclaude（Gitlawb → Twigpine）、lobehub（lobe-chat 更名并转向 agent 运营定位）。停更但入选的：MetaGPT（2026-01 起无推送，多智能体鼻祖的历史坐标）、autogen（2026-04 起无推送，社区转向 Microsoft Agent Framework）。</p>
+  <h2>免责</h2>
+  <p>star 数日波动数千属常态，引用请注明快照日期；分类归属按项目当前定位判断，有异议欢迎提 issue；本站与榜单文档同源，不一致时以核验脚本重跑结果为准。</p>
+</div>
+
+<footer>
+  <div class="foot-line wrap">
+    <span>Agent Stack 50 · 第 001 期 · 快照 2026-10-07 · GitHub API 逐仓核验</span>
+    <span><a href="#/pipeline">能力管线</a> · <a href="#/prd">PRD</a> · <a href="#/about">口径</a> · <a href="https://github.com/wulinjun007/agent-stack-50" rel="noopener" target="_blank">GitHub ↗</a></span>
+  </div>
+</footer>
+
+<script>
+/* 数据：与 TOP50-榜单.md 同源。字段：r 排名 n 名称 repo 仓库 c 分类 s star l 语言 lic 许可
+   up 最近推送 tag 定位 why 入选理由 inv 调用方式 mode 状态 cmd 安装 osi 宽松许可 */
+var CATS=[
+ {id:"wf",no:"01",name:"工作流编排平台",note:"可视化编排、自动化与 LLMOps 平台"},
+ {id:"af",no:"02",name:"智能体框架",note:"构建与编排智能体的代码框架"},
+ {id:"ca",no:"03",name:"编码智能体与方法论",note:"编码 agent、技能体系与工程流程"},
+ {id:"mem",no:"04",name:"记忆与上下文",note:"agent 的长期记忆与知识组织"},
+ {id:"obs",no:"05",name:"可观测与评测",note:"trace、评估与质量监控"},
+ {id:"dep",no:"06",name:"部署与推理",note:"自托管 PaaS、推理引擎与私有化界面"},
+ {id:"mcp",no:"07",name:"MCP 生态",note:"Model Context Protocol 索引与参考实现"}
+];
+var DATA=[
+{r:1,n:"Superpowers",repo:"obra/superpowers",c:"ca",s:295947,l:"Shell",lic:"MIT",osi:true,up:"2026-10-06",tag:"给编码 agent 的完整开发方法论：15 个 skill 串成强制工作流",why:"全清单热度第一。本项目构建流程照它的阶段执行：需求梳理→任务拆解→实现→两段审查（规格合规+代码质量），QA 报告即第二段审查产物。",inv:"构建流程按其阶段流执行，产出 QA-报告.md 留痕",mode:"已调用",cmd:"npx skills add obra/superpowers"},
+{r:2,n:"n8n",repo:"n8n-io/n8n",c:"wf",s:206760,l:"TypeScript",lic:"fair-code（Sustainable Use）",osi:false,up:"2026-10-06",tag:"可视化工作流自动化平台，原生 AI 节点 + 400+ 集成",why:"工作流自动化的体量之王，AI 节点原生内置；fair-code 许可需注意商用边界。",inv:"月度数据刷新流水线（GitHub API→diff→通知）首选挂载平台",mode:"路线图",cmd:"docker run -it --rm -p 5678:5678 n8nio/n8n"},
+{r:3,n:"AutoGPT",repo:"Significant-Gravitas/AutoGPT",c:"af",s:187667,l:"Python",lic:"双许可：平台目录 Polyform Shield，其余 MIT",osi:true,up:"2026-10-06",tag:"自主智能体先驱，现转型低代码 agent 平台",why:"自主 agent 的历史坐标；平台化转型本身是'agent 产品该怎么收敛'的活样本。",inv:"参照其自主性边界与平台化转型路径",mode:"参照",cmd:"见仓库 README"},
+{r:4,n:"Ollama",repo:"ollama/ollama",c:"dep",s:182368,l:"Go",lic:"MIT",osi:true,up:"2026-10-06",tag:"一条命令本地跑大模型（GLM/Qwen/DeepSeek/Kimi 等）",why:"本地推理的事实标准；部署方案 A 的推理底座。",inv:"内网/离线环境为站内语义检索供本地推理（V1.2）",mode:"路线图",cmd:"curl -fsSL https://ollama.com/install.sh | sh"},
+{r:5,n:"Anthropic Skills",repo:"anthropics/skills",c:"ca",s:179884,l:"Python",lic:"未标注",osi:false,up:"2026-10-05",tag:"Anthropic 官方 Agent Skills 仓库",why:"Agent Skills 生态的官方源头，skill 编写规范的参照系。",inv:"本项目 skill 化文档结构参照其规范",mode:"参照",cmd:"git clone https://github.com/anthropics/skills"},
+{r:6,n:"Dify",repo:"langgenius/dify",c:"wf",s:157958,l:"TypeScript",lic:"修改版 Apache-2.0（附加商用条件）",osi:false,up:"2026-10-06",tag:"Agentic 工作流 + RAG 管线一体化 LLMOps 平台",why:"'平台型'路线的头部：把工作流、RAG、模型管理收进一个自助平台。",inv:"把 50 张能力卡入其知识库供团队问答（V1.2 候选）",mode:"路线图",cmd:"git clone https://github.com/langgenius/dify && cd dify/docker && docker compose up -d"},
+{r:7,n:"Langflow",repo:"langflow-ai/langflow",c:"wf",s:155545,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"拖拽式构建与部署 AI agent / 工作流",why:"Python 技术栈侧的可视化编排头部，与 n8n 形成生态互补。",inv:"纯 Python 栈工作流备选（与 n8n 二选一评估）",mode:"参照",cmd:"pip install langflow"},
+{r:8,n:"Open WebUI",repo:"open-webui/open-webui",c:"dep",s:154084,l:"Python",lic:"自定义（Open WebUI License，品牌条款）",osi:false,up:"2026-10-06",tag:"自托管 AI 界面，支持 Ollama/OpenAI 兼容后端",why:"自托管'ChatGPT 替身'的头部界面；品牌条款许可需留意。",inv:"部署方案 B：与 Ollama 组成本地问答台喂入 PRD/榜单",mode:"路线图",cmd:"docker run -d -p 3000:8080 ghcr.io/open-webui/open-webui"},
+{r:9,n:"LangChain",repo:"langchain-ai/langchain",c:"af",s:147498,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"agent 工程平台（1.0 全面重写后定位）",why:"生态最完整的 agent 工程框架，1.0 后从'链'收敛到'agent 工程'。",inv:"语义检索 API 的编排层候选（V1.2）",mode:"路线图",cmd:"pip install -U langchain"},
+{r:10,n:"browser-use",repo:"browser-use/browser-use",c:"af",s:117270,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"让 agent 会用浏览器的连接层",why:"浏览器智能体的品类定义者；本站验收所用 Playwright 与其同源底层。",inv:"QA 层浏览器自动化验收的同类能力",mode:"已调用",cmd:"pip install browser-use"},
+{r:11,n:"Paperclip",repo:"paperclipai/paperclip",c:"ca",s:97983,l:"TypeScript",lic:"MIT",osi:true,up:"2026-10-06",tag:"'agent 员工团队'管理平台：心跳唤醒、预算、审批流",why:"多 agent 运营的平台化答案（预算/审批/多公司隔离）。",inv:"榜单月度维护拟用'心跳唤醒+原子任务签出'机制（需 Node ≥ 24）",mode:"路线图",cmd:"npx paperclipai test-drive"},
+{r:12,n:"awesome-mcp-servers",repo:"punkpeye/awesome-mcp-servers",c:"mcp",s:95871,l:"—",lic:"MIT",osi:true,up:"2026-09-27",tag:"MCP 生态最大索引：4,298 条 / 61 分类",why:"MCP 接入选型的第一入口；但它是索引不是精选，尾部混杂营销条目，只按官方标记过滤。",inv:"调研层：确定外部能力接入面时按 🎖️ 官方标记过滤取头部",mode:"已调用",cmd:"（索引，直接阅读 README）"},
+{r:13,n:"vLLM",repo:"vllm-project/vllm",c:"dep",s:93282,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"高吞吐低显存 LLM 推理与服务引擎",why:"生产级 GPU 推理的赢家（PagedAttention），部署方案里的'上量档'。",inv:"语义检索上量后的生产推理引擎（V2）",mode:"路线图",cmd:"pip install vllm"},
+{r:14,n:"MCP Servers",repo:"modelcontextprotocol/servers",c:"mcp",s:91044,l:"TypeScript",lic:"MIT → Apache-2.0 过渡中",osi:true,up:"2026-10-05",tag:"MCP 官方参考服务器集",why:"MCP 协议的参考实现，外部能力接入的规范源。",inv:"接入规范参照；许可正处过渡期已标注",mode:"参照",cmd:"见仓库 README"},
+{r:15,n:"OpenHands",repo:"OpenHands/OpenHands",c:"af",s:90111,l:"TypeScript",lic:"MIT",osi:true,up:"2026-10-06",tag:"AI 软件开发智能体（原 All-Hands-AI，已迁移组织）",why:"'给 agent 一台电脑做开发'路线的头部实现。",inv:"榜单自动化更新（查 PR/改名/迁移）的候选执行者",mode:"路线图",cmd:"见仓库 README（docker 单容器）"},
+{r:16,n:"LobeHub",repo:"lobehub/lobehub",c:"dep",s:83016,l:"TypeScript",lic:"LobeHub Community License（自定义）",osi:false,up:"2026-10-06",tag:"开源 agent 运营中枢（原 lobe-chat，已更名转向）",why:"从聊天界面转向'Chief Agent Operator'定位，方向与 Paperclip 殊途同归；自定义社区许可需读条款。",inv:"agent 运营中枢形态的参照样本",mode:"参照",cmd:"见仓库 README（docker compose）"},
+{r:17,n:"archify",repo:"tt-a1i/archify",c:"ca",s:78582,l:"JavaScript",lic:"MIT",osi:true,up:"2026-10-06",tag:"想法/代码库 → 自包含交互式架构图（agent 画图 skill）",why:"'可验证的 agent 产出'代表：结构化 IR+校验门禁，失败给修复回执。",inv:"本站管线图按其交付标准手写：自包含 SVG、可缩放、带 aria",mode:"已调用",cmd:"npx skills add tt-a1i/archify"},
+{r:18,n:"OpenSpec",repo:"Fission-AI/OpenSpec",c:"ca",s:71159,l:"TypeScript",lic:"MIT",osi:true,up:"2026-10-06",tag:"规格驱动开发（SDD）框架：先对齐'要建什么'再动手",why:"轻量 SDD：每个变更有 proposal/specs/design/tasks，SHALL+WHEN/THEN 场景格式。",inv:"本站 PRD 全套按其目录结构与场景格式落盘于 openspec/",mode:"已调用",cmd:"npm i -g @fission-ai/openspec && openspec init"},
+{r:19,n:"MetaGPT",repo:"FoundationAgents/MetaGPT",c:"af",s:70757,l:"Python",lic:"MIT",osi:true,up:"2026-01-21",tag:"多智能体'AI 软件公司'框架鼻祖",why:"停更（2026-01 起）但作为多智能体协作范式的起点保留历史坐标。",inv:"参照：'岗位化'多智能体分工思想的源头",mode:"参照",cmd:"pip install metagpt"},
+{r:20,n:"AnythingLLM",repo:"Mintplex-Labs/anything-llm",c:"dep",s:66755,l:"JavaScript",lic:"MIT",osi:true,up:"2026-10-06",tag:"全栈私有 AI 知识库：文档问答一体机",why:"把'私有文档→可问答'做成开箱即用一体机的代表。",inv:"部署方案 D：喂入 PRD+榜单做私有问答站（V1.2）",mode:"路线图",cmd:"docker run -d -p 3001:3001 mintplexlabs/anythingllm"},
+{r:21,n:"mem0",repo:"mem0ai/mem0",c:"mem",s:66671,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"AI agent 记忆层（drop-in 记忆基础设施）",why:"记忆赛道头部，接入成本最低（两行 API）。",inv:"记住访客筛选偏好（分类/许可/活跃度）（V2）",mode:"路线图",cmd:"pip install mem0ai"},
+{r:22,n:"Coolify",repo:"coollabsio/coolify",c:"dep",s:62652,l:"PHP",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"自托管 PaaS：Vercel/Heroku/Netlify 开源替代",why:"自托管 PaaS 头部，识别仓库 compose 即可拉起应用。",inv:"部署通道③：deploy/docker-compose.yml 可直接被其拉起",mode:"方案已写",cmd:"curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash"},
+{r:23,n:"AutoGen",repo:"microsoft/autogen",c:"af",s:61271,l:"Python",lic:"CC-BY-4.0",osi:false,up:"2026-04-15",tag:"微软多智能体对话编程框架",why:"停更（2026-04 起）：社区转向 Microsoft Agent Framework；作为'对话式多智能体'范式代表保留。",inv:"参照：对话式多智能体编程范式",mode:"参照",cmd:"pip install -U autogen-agentchat"},
+{r:24,n:"LiteLLM",repo:"BerriAI/litellm",c:"dep",s:60233,l:"Python",lic:"MIT 核心 + enterprise 目录商业",osi:false,up:"2026-10-06",tag:"AI 网关：一个 API 调 100+ 家 LLM",why:"多供应商统一接入层的事实标准，换模型不改代码。",inv:"未来任何模型调用统一走其网关（V1.2+）",mode:"路线图",cmd:"pip install 'litellm[proxy]'"},
+{r:25,n:"crewAI",repo:"crewAIInc/crewAI",c:"af",s:59397,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"角色化多智能体编排框架",why:"'角色+任务+流程'三抽象把多 agent 协作讲得最顺的框架。",inv:"参照：岗位化拆解任务的思想样本",mode:"参照",cmd:"pip install crewai"},
+{r:26,n:"Flowise",repo:"FlowiseAI/Flowise",c:"wf",s:55485,l:"TypeScript",lic:"Apache-2.0 核心 + enterprise 目录商业",osi:false,up:"2026-08-13",tag:"低代码可视化 AI Agent 编排",why:"可视化 agent 编排的早期头部；2026-08 后推送放缓已标注。",inv:"低代码编排备选评估项",mode:"参照",cmd:"npx flowise start"},
+{r:27,n:"ai-agent-book",repo:"bojieli/ai-agent-book",c:"ca",s:52583,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-09-30",tag:"《深入理解 AI Agent》开源书：Agent = LLM + 上下文 + 工具",why:"中文世界的 agent 系统性教科书：十章正文 + 109 实验 + 15 语译本。",inv:"理论底座：能力调用框架按其上下文工程/工具/多智能体章节组织",mode:"参照",cmd:"在线阅读 bojieli.github.io/ai-agent-book"},
+{r:28,n:"LlamaIndex",repo:"run-llama/llama_index",c:"af",s:52422,l:"Python",lic:"MIT",osi:true,up:"2026-10-05",tag:"AI 文档处理平台（RAG 数据层）",why:"文档摄取→索引→检索链路最全的数据层，agent 的'读文件'能力来源。",inv:"50 份 README 入文档索引支撑站内检索（V1.2）",mode:"路线图",cmd:"pip install llama-index"},
+{r:29,n:"LocalAI",repo:"mudler/LocalAI",c:"dep",s:49411,l:"Go",lic:"MIT",osi:true,up:"2026-10-06",tag:"本地 AI 引擎：OpenAI 兼容 API 跑任意模型",why:"无 GPU 环境也能给出 OpenAI 兼容端点的备选。",inv:"内网 OpenAI 兼容端点备选（Ollama 不覆盖时）",mode:"参照",cmd:"docker run -p 8080:8080 localai/localai"},
+{r:30,n:"scientific-agent-skills",repo:"K-Dense-AI/scientific-agent-skills",c:"ca",s:47777,l:"Python",lic:"MIT（各 skill 独立许可）",osi:true,up:"2026-10-05",tag:"最大科研 agent skill 库：166 个 skill",why:"skill 库工程化样本：带测试套件、每周安检报告；按需单装勿整库。",inv:"参照：skill 生态组织方式（防稀释触发精度）",mode:"参照",cmd:"npx skills add K-Dense-AI/scientific-agent-skills"},
+{r:31,n:"Hindsight",repo:"vectorize-io/hindsight",c:"mem",s:46261,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"'会学习'的 agent 记忆：观察归纳 + 心智模型",why:"不止回忆对话：多证据去重归纳、新证据强化/削弱信念，LongMemEval SOTA。",inv:"编辑侧'越用越懂你'候选（比 mem0 多归纳层）（V2）",mode:"路线图",cmd:"pip install hindsight-api"},
+{r:32,n:"Ray",repo:"ray-project/ray",c:"dep",s:43975,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"AI 计算引擎：分布式 runtime + 训练/推理/服务库",why:"vLLM 等推理引擎的分布式底座，规模化档位的基建。",inv:"部署注记：多机推理规模化时启用",mode:"参照",cmd:"pip install ray"},
+{r:33,n:"LangGraph",repo:"langchain-ai/langgraph",c:"af",s:42784,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"弹性智能体状态机，可控多步工作流底座",why:"把 agent 表达为显式状态机，可控性与可恢复性最强。",inv:"'更新→校验→发布'多步管线的状态机表达（V1.1）",mode:"路线图",cmd:"pip install -U langgraph"},
+{r:34,n:"agno",repo:"agno-agi/agno",c:"af",s:42580,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"构建、运行与管理 agent 平台的全栈框架",why:"性能导向的全栈 agent 平台（原生 Python，附运行时管理面）。",inv:"全栈框架对照评估项",mode:"参照",cmd:"pip install -U agno"},
+{r:35,n:"Dokploy",repo:"Dokploy/dokploy",c:"dep",s:37684,l:"TypeScript",lic:"核心开源 + proprietary 目录专有",osi:false,up:"2026-10-05",tag:"开源自托管 PaaS（Docker 底座，Vercel/Netlify 替代）",why:"Coolify 之外的第二自托管 PaaS，界面轻、Docker 原生。",inv:"部署通道③备选：compose 直接拉起",mode:"方案已写",cmd:"curl -sSL https://dokploy.com/install.sh | bash"},
+{r:36,n:"Langfuse",repo:"langfuse/langfuse",c:"obs",s:35439,l:"TypeScript",lic:"MIT 核心 + EE 目录商业",osi:false,up:"2026-10-06",tag:"agent 评测与可观测（trace/eval），现归 ClickHouse",why:"LLM 观测赛道头部；2025 年并入 ClickHouse 后工程节奏加快。",inv:"语义检索上线后的全链路 trace（V1.2）",mode:"路线图",cmd:"见仓库 README（docker compose 自托管）"},
+{r:37,n:"openclaude",repo:"Twigpine/openclaude",c:"ca",s:33660,l:"TypeScript",lic:"衍生自 Claude Code 专有代码（灰色）",osi:false,up:"2026-10-06",tag:"Claude Code 开源多模型分支（已迁移社区）",why:"保留 Claude Code 完整工作流但接多家模型商；⚠️ 版权灰色有 takedown 风险。",inv:"第二编码 agent runner 候选（原生支持 zai GLM Coding Plan）",mode:"参照",cmd:"npm i -g @gitlawb/openclaude"},
+{r:38,n:"code-review-graph",repo:"tirth8205/code-review-graph",c:"ca",s:31936,l:"Python",lic:"MIT",osi:true,up:"2026-09-18",tag:"本地代码智能图谱（MCP+CLI），基准中位 63× token 降幅",why:"'上下文经济'代表：让编码 agent 只读相关文件。",inv:"大仓库接编码 agent 前的上下文压缩方案（借鉴项）",mode:"参照",cmd:"pip install code-review-graph"},
+{r:39,n:"Graphiti",repo:"getzep/graphiti",c:"mem",s:31488,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"为 agent 构建实时知识图谱记忆",why:"时间感知的知识图谱：'谁替代谁/谁互补'类关系查询的底座。",inv:"50 项目关系图谱（互补/替代/依赖）（V2）",mode:"路线图",cmd:"pip install graphiti-core"},
+{r:40,n:"OpenAI Agents SDK",repo:"openai/openai-agents-python",c:"af",s:29863,l:"Python",lic:"MIT",osi:true,up:"2026-10-06",tag:"OpenAI 官方轻量多智能体框架",why:"官方极简派：handoff/guardrail/session 三原语，'够用哲学'的对照物。",inv:"参照：轻量框架的抽象下限",mode:"参照",cmd:"pip install openai-agents"},
+{r:41,n:"smolagents",repo:"huggingface/smolagents",c:"af",s:29705,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"HF 极简 agent：让模型'写代码来思考'",why:"CodeAgent 范式定义者：动作即代码，比 JSON 工具调用少一层间接。",inv:"参照：'代码即行动'极简范式",mode:"参照",cmd:"pip install smolagents"},
+{r:42,n:"hallmark",repo:"Nutlope/hallmark",c:"ca",s:29693,l:"CSS",lic:"MIT",osi:true,up:"2026-08-06",tag:"反 AI 味 UI 设计 skill：21 主题 × 58 道 slop 门禁",why:"让 agent 产出的界面'像做的不像生成的'：宏观结构+主题目录+58 门禁。",inv:"本站视觉即其产出：Almanac 主题 × Index-First 宏结构 × 58 门禁全过（QA 报告留痕）",mode:"已调用",cmd:"npx skills add nutlope/hallmark"},
+{r:43,n:"Cua",repo:"trycua/cua",c:"ca",s:28421,l:"Rust",lic:"MIT 核心（部分 AGPL）",osi:false,up:"2026-10-06",tag:"computer-use 2.0 全家桶：驱动 + VM 沙箱 + 评测",why:"GUI 自动化进沙箱的完整方案，本机 Apple Silicon 可跑 Lume。",inv:"敏感自动化隔离在 VM 内执行的方案储备",mode:"参照",cmd:"见仓库 README"},
+{r:44,n:"Activepieces",repo:"activepieces/activepieces",c:"wf",s:24924,l:"TypeScript",lic:"MIT 核心 + EE 目录商业",osi:false,up:"2026-10-06",tag:"AI Agent / MCP / 工作流自动化，约 400 个 MCP 连接器",why:"'MCP 优先'的自动化平台：连接器即 MCP 服务器。",inv:"事件通知通道（榜单更新订阅）（V2）",mode:"路线图",cmd:"npx activepieces"},
+{r:45,n:"Opik",repo:"comet-ml/opik",c:"obs",s:22402,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"LLM 应用 / RAG / agent 工作流的调试评测监控",why:"与 Langfuse 双头并存的另一极，prompt 实验侧更强。",inv:"评测备选：prompt 实验优先时启用",mode:"参照",cmd:"pip install opik"},
+{r:46,n:"Google ADK",repo:"google/adk-python",c:"af",s:21723,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"Google Agent Development Kit（code-first）",why:"Gemini 生态的官方 agent 工具包，多模态与 Vertex 部署一体。",inv:"评估 Gemini 生态时启用",mode:"参照",cmd:"pip install google-adk"},
+{r:47,n:"SkillSpector",repo:"NVIDIA/SkillSpector",c:"ca",s:19550,l:"Python",lic:"Apache-2.0",osi:true,up:"2026-10-06",tag:"agent skill 装前安检扫描器：71 漏洞模式 × 17 类",why:"第三方 skill 生态的安全门禁：提示注入/数据外传/MCP 投毒扫描。",inv:"装第三方 skill 前先过安检（本项目装 hallmark/ui-skills 前已人工审读源码）",mode:"已调用",cmd:"见仓库 README（uv tool install）"},
+{r:48,n:"Gas Town",repo:"gastownhall/gastown",c:"ca",s:18276,l:"Go",lic:"MIT",osi:true,up:"2026-09-29",tag:"Steve Yegge 多 agent 工作区管理器：'DISK is the memory'",why:"git+tmux 原生的多 agent 编排试验田；状态全 git 持久化思想值得借鉴（tag 滞后 main 已知）。",inv:"借鉴：状态持久化与看门狗设计",mode:"参照",cmd:"brew install gastown"},
+{r:49,n:"Windmill",repo:"windmill-labs/windmill",c:"wf",s:18116,l:"Rust",lic:"Apache-2.0 / AGPLv3 双许可 + 企业版",osi:true,up:"2026-10-06",tag:"把脚本变成工作流与内部产品的开发者平台",why:"开发者向（代码优先）的工作流平台，与低代码侧互补。",inv:"数据刷新脚本的工程化承载备选",mode:"参照",cmd:"见仓库 README（docker compose）"},
+{r:50,n:"Kimi Code CLI",repo:"MoonshotAI/kimi-code",c:"ca",s:7778,l:"TypeScript",lic:"MIT",osi:true,up:"2026-10-02",tag:"Moonshot 官方开源终端编码 agent（单二进制）",why:"官方开源的编码 agent 客户端样本：子代理/hooks/TUI 实现 + 视频输入特色。",inv:"第二编码 agent cross-check 候选（单二进制直装）",mode:"参照",cmd:"curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash"}
+];
+/* fmt 与渲染 */
+function fmt(n){return n.toLocaleString("en-US")}
+function esc(s){return String(s).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+var CAT_NAME={},CAT_NO={};CATS.forEach(function(c){CAT_NAME[c.id]=c.name;CAT_NO[c.id]=c.no});
+var CAT_SUM={};DATA.forEach(function(d){CAT_SUM[d.c]=(CAT_SUM[d.c]||0)+d.s});
+var state={q:"",cats:{},osi:false,sort:"group"};
+CATS.forEach(function(c){state.cats[c.id]=false});
+
+function matches(d){
+  if(state.osi&&!d.osi)return false;
+  var anyCat=CATS.some(function(c){return state.cats[c.id]});
+  if(anyCat&&!state.cats[d.c])return false;
+  if(state.q){
+    var hay=(d.n+" "+d.repo+" "+d.tag+" "+d.inv+" "+CAT_NAME[d.c]+" "+d.lic).toLowerCase();
+    if(hay.indexOf(state.q.toLowerCase())<0)return false;
+  }
+  return true;
+}
+function render(){
+  var list=document.getElementById("list");
+  var vis=DATA.filter(matches);
+  var anyCat=CATS.some(function(c){return state.cats[c.id]});
+  var dirty=state.q||anyCat||state.osi;
+  document.getElementById("btn-clear").disabled=!dirty;
+  document.getElementById("count").textContent=vis.length+" / "+DATA.length;
+  if(state.sort==="group"){
+    list.innerHTML=CATS.map(function(c){
+      var rows=vis.filter(function(d){return d.c===c.id});
+      if(!rows.length)return "";
+      return catHTML(c,rows);
+    }).join("")||emptyHTML();
+  }else{
+    var rows=vis.slice();
+    rows.sort(state.sort==="star"?function(a,b){return b.s-a.s}:function(a,b){return a.up<b.up?1:-1});
+    list.innerHTML=rows.length?('<div class="cat"><p class="cat-label"><span>'+(state.sort==="star"?"全部 50 项 · 按 ★ 降序":"全部 50 项 · 按最近活跃")+'</span><span class="sum">Σ '+fmt(rows.reduce(function(a,d){return a+d.s},0))+' ★</span></p>'+rows.map(rowHTML).join("")+"</div>"):emptyHTML();
+  }
+}
+function catHTML(c,rows){
+  return '<section class="cat" aria-label="'+esc(c.name)+'">'
+    +'<p class="cat-label"><span>'+c.no+' · '+esc(c.name)+' · '+rows.length+' 项</span><span class="sum">Σ '+fmt(CAT_SUM[c.id])+' ★ · '+esc(c.note)+'</span></p>'
+    +rows.map(rowHTML).join("")+"</section>";
+}
+function rowHTML(d){
+  var stale=d.up<"2026-04-08";
+  var cn=CAT_NO[d.c]&&('<span class="repo">· '+CAT_NO[d.c]+'</span>')||"";
+  return '<details class="row"><summary>'
+    +'<span class="r">'+String(d.r).padStart(2,"0")+'</span>'
+    +'<span class="nm"><span class="name">'+esc(d.n)+'</span><span class="repo">'+esc(d.repo)+cn+'</span>'
+    +(stale?'<span class="flag">停更</span>':'')
+    +'<span class="tag">'+esc(d.tag)+'</span></span>'
+    +'<span class="meta"><span class="stars">'+fmt(d.s)+' ★</span><span>'+esc(d.l)+'</span><span class="lic" title="'+esc(d.lic)+'">'+esc(d.lic)+'</span></span>'
+    +'</summary><div class="body">'
+    +'<div class="fact"><h3>为何入选</h3><p>'+esc(d.why)+'</p></div>'
+    +'<div class="fact"><h3>本项目如何调用</h3><p><span class="mode">'+esc(d.mode)+'</span>'+esc(d.inv)+'</p>'
+    +(d.cmd?'<code>$ '+esc(d.cmd)+'</code>':"")+'</div>'
+    +'<div class="facts-line"><span>推送 '+d.up+'</span><span>许可 '+esc(d.lic)+'</span><span>'+esc(d.l)+'</span>'
+    +'<a href="https://github.com/'+esc(d.repo)+'" rel="noopener" target="_blank">github.com/'+esc(d.repo)+' ↗</a></div>'
+    +'</div></details>';
+}
+function emptyHTML(){
+  return '<div class="empty"><p>没有匹配的项目——放宽关键词或清除筛选。</p><button id="empty-clear" type="button">清除全部筛选</button></div>';
+}
+
+/* 工具栏交互 */
+var qEl=document.getElementById("q"),qT;
+qEl.addEventListener("input",function(){
+  clearTimeout(qT);qT=setTimeout(function(){state.q=qEl.value.trim();render()},120);
+});
+document.getElementById("btn-clear").addEventListener("click",function(){
+  state.q="";qEl.value="";state.osi=false;
+  document.getElementById("btn-osi").setAttribute("aria-pressed","false");
+  CATS.forEach(function(c){state.cats[c.id]=false});
+  renderChips();render();
+});
+var chips=document.getElementById("chips");
+function renderChips(){
+  chips.innerHTML=CATS.map(function(c){
+    return '<button type="button" class="chip" data-cat="'+c.id+'" aria-pressed="'+state.cats[c.id]+'">'+c.no+' '+esc(c.name)+'</button>';
+  }).join("");
+}
+chips.addEventListener("click",function(e){
+  var b=e.target.closest("[data-cat]");if(!b)return;
+  var id=b.getAttribute("data-cat");state.cats[id]=!state.cats[id];renderChips();render();
+});
+document.getElementById("btn-osi").addEventListener("click",function(){
+  state.osi=!state.osi;this.setAttribute("aria-pressed",String(state.osi));render();
+});
+document.getElementById("sort").addEventListener("change",function(){state.sort=this.value;render()});
+document.getElementById("list").addEventListener("click",function(e){
+  if(e.target&&e.target.id==="empty-clear"){document.getElementById("btn-clear").click()}
+});
+renderChips();render();
+
+/* 路由 */
+var PAGES=["list","pipeline","prd","about"];
+function route(){
+  var h=location.hash||"#/";
+  var name=h.replace("#/","")||"list";
+  if(PAGES.indexOf(name)<0)name="list";
+  PAGES.forEach(function(p){
+    document.getElementById("page-"+p).hidden=(p!==name);
+  });
+  document.querySelectorAll("[data-nav]").forEach(function(a){
+    if(a.getAttribute("data-nav")==="#/"+(name==="list"?"":name)){a.setAttribute("aria-current","page")}
+    else{a.removeAttribute("aria-current")}
+  });
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);route();
+
+/* 管线图（archify 式：自包含 SVG，已调用层实心标出） */
+var STAGES=[
+ {t:"调研层",d:"awesome-mcp-servers",live:true},
+ {t:"数据层",d:"GitHub API + OpenSpec",live:true},
+ {t:"规格层",d:"OpenSpec 四件套",live:true},
+ {t:"方法论层",d:"Superpowers",live:true},
+ {t:"设计层",d:"hallmark · ui-skills",live:true},
+ {t:"实现层",d:"单文件 HTML + archify 式图",live:true},
+ {t:"QA 层",d:"58 门禁 + Playwright",live:true},
+ {t:"部署层",d:"Pages · Docker · Coolify",live:true}
+];
+(function(){
+  var g=document.querySelector("#page-pipeline g#stages");
+  if(!g)return;
+  var NS="http://www.w3.org/2000/svg";
+  function descLines(s){
+    if(s.length<=16)return [s];
+    var cut=s.lastIndexOf(" ",15);
+    if(cut<0)cut=s.lastIndexOf("·",15);
+    if(cut<0)cut=s.lastIndexOf("+",15);
+    if(cut<0)cut=s.lastIndexOf("-",15);
+    if(cut<0)cut=15;
+    return [s.slice(0,cut).trim(),s.slice(cut).trim()];
+  }
+  STAGES.forEach(function(s,i){
+    var x=17+i*146;
+    var rect=document.createElementNS(NS,"rect");
+    rect.setAttribute("x",x);rect.setAttribute("y",40);
+    rect.setAttribute("width",131);rect.setAttribute("height",76);
+    rect.setAttribute("fill",s.live?"#dfe4ee":"#e4e7ec");
+    rect.setAttribute("stroke",s.live?"#2d4a8a":"#606571");
+    rect.setAttribute("stroke-width",s.live?1.5:1);
+    g.appendChild(rect);
+    var dot=document.createElementNS(NS,"circle");
+    dot.setAttribute("cx",x+11);dot.setAttribute("cy",54);dot.setAttribute("r",4);
+    dot.setAttribute("fill",s.live?"#2d4a8a":"none");
+    dot.setAttribute("stroke","#606571");g.appendChild(dot);
+    var t1=document.createElementNS(NS,"text");
+    t1.setAttribute("x",x+21);t1.setAttribute("y",59);t1.setAttribute("font-size",15);
+    t1.setAttribute("fill","#16181c");t1.setAttribute("font-weight","600");
+    t1.textContent=s.t;g.appendChild(t1);
+    descLines(s.d).forEach(function(line,j){
+      var t2=document.createElementNS(NS,"text");
+      t2.setAttribute("x",x+11);t2.setAttribute("y",78+j*14);t2.setAttribute("font-size",11);
+      t2.setAttribute("fill","#5c626d");
+      t2.textContent=line;g.appendChild(t2);
+    });
+    if(i<STAGES.length-1){
+      var line=document.createElementNS(NS,"line");
+      line.setAttribute("x1",x+133);line.setAttribute("y1",78);
+      line.setAttribute("x2",x+141);line.setAttribute("y2",78);
+      line.setAttribute("stroke","#606571");g.appendChild(line);
+      var head=document.createElementNS(NS,"polygon");
+      head.setAttribute("points",(x+141)+",73 "+(x+141)+",83 "+(x+147)+",78");
+      head.setAttribute("fill","#606571");g.appendChild(head);
+    }
+  });
+})();
+
+/* 管线页六卡（stage 列表） */
+var PIPE=[
+ {t:"调研层 · 确定接入面",s:"已调用",items:["awesome-mcp-servers——只按官方标记过滤取头部","modelcontextprotocol/servers——外部能力接入规范","GitHub REST API——63 候选仓逐仓核验"]},
+ {t:"规格层 · 写下要建什么",s:"已调用",items:["OpenSpec——proposal / specs / design / tasks 四件套","SHALL + WHEN/THEN 场景格式，见 openspec/"]},
+ {t:"方法论层 · 怎么干活",s:"已调用",items:["Superpowers——梳理→拆解→实现→两段审查","第二段审查产物 = QA-报告.md"]},
+ {t:"设计层 · 长什么样",s:"已调用",items:["hallmark——Almanac 主题 × Index-First 宏结构 × 58 门禁","ui-skills——OG/Twitter/JSON-LD 元数据与可访问性检查单"]},
+ {t:"实现层 · 产出生成",s:"已调用",items:["单文件 index.html——零构建、零依赖、零追踪","archify 式管线图——自包含 SVG + aria"]},
+ {t:"QA + 部署层 · 交付",s:"已调用 / 方案已写",items:["58 门禁逐条过 + 四视口截图验收","部署四通道：Pages · Docker · Coolify/Dokploy · 本地 http.server","deploy/DEPLOY.md 含月度刷新流程"]}
+];
+document.getElementById("pipe-grid").innerHTML=PIPE.map(function(p){
+  return '<div class="stage"><h3>'+esc(p.t)+' <span class="st">· '+esc(p.s)+'</span></h3><ul>'
+    +p.items.map(function(i){return "<li>"+esc(i)+"</li>"}).join("")+"</ul></div>";
+}).join("");
+</script>
+<noscript><div class="wrap" style="padding:2rem 0">本站榜单由 JavaScript 渲染，请启用 JS；或直接阅读仓库内 <a href="TOP50-榜单.md">TOP50-榜单.md</a>（纯 Markdown，无需 JS）。</div></noscript>
+</body>
+</html>

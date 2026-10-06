@@ -1,0 +1,13 @@
+# AgentStack 50 · 自托管部署
+# 用法：docker compose -f deploy/docker-compose.yml up -d
+# 站点随后在 http://<主机>:8080 可访问；镜像内无任何构建步骤
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: agent-stack-50:latest
+    container_name: agent-stack-50
+    ports:
+      - "8080:80"
+    restart: unless-stopped
